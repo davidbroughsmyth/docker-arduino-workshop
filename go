@@ -6,8 +6,7 @@ docker build -t ${IMAGE_NAME} .
 
 docker run --rm -t -i \
   --privileged \
-  --volume=$(pwd):/workshop/workdir \
+  --volume=$(pwd):/workshop \
 	--volume=/dev/bus/usb:/dev/bus/usb \
   ${IMAGE_NAME} \
 	/bin/bash
-
